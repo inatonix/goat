@@ -1,4 +1,4 @@
-module goat
+module homebrew-goat
 
 go 1.19
 
