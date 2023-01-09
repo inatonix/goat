@@ -10,7 +10,6 @@ builds:
       - CGO_ENABLED=0
     goos:
       - linux
-      - windows
       - darwin
 
 archives:
@@ -31,8 +30,6 @@ checksum:
   name_template: "checksums.txt"
 snapshot:
   name_template: "{{ incpatch .Version }}-next"
-env_files:
-  github_token: ~/.secrets/github_token
 changelog:
   sort: asc
   filters:
