@@ -21,7 +21,7 @@ THE SOFTWARE.
 */
 package main
 
-import "homebrew-goat/cmd"
+import "goat/cmd"
 
 func main() {
 	cmd.Execute()
