@@ -11,6 +11,18 @@ import (
 	"github.com/spf13/cobra"
 )
 
+func SearchHandlers(ls string) (string, error) {
+	// ll := strings.Split(string(ls), "\n")
+	// for _, name := range ll {
+	// 	if name == "handler" || name == "controller" {
+
+	// 	}
+	// }
+	// fmt.Println(ll[0])
+	// return "", nil
+	return "", nil
+}
+
 var generateCmd = &cobra.Command{
 	Use:   "generate stab",
 	Short: "A brief description of your command",
@@ -22,14 +34,8 @@ This application is a tool to generate the needed files
 to quickly create a Cobra application.`,
 
 	Run: func(cmd *cobra.Command, args []string) {
-		// name := args[0]
-		// contents, err := os.ReadFile(name)
-		// if err != nil {
-		// 	fmt.Println("File reading error", err)
-		// 	return
-		// }
-
-		ls, err := exec.Command("ls").Output()
+		ls, err := exec.Command("go vet").Output()
+		// SearchHandlers(string(ls))
 		if err != nil {
 			fmt.Errorf("%w", err)
 		}
